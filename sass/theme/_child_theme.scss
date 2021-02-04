@@ -1,0 +1,148 @@
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'montserrat', sans-serif;
+  font-size: 14pt;
+  background-color: #ffffff;
+}
+
+.jumbotron {
+  font-size: 30pt;
+  border-bottom: double 15px $primary;
+  border-top: double 15px $primary;
+  background-color: #ffffff;
+  position: relative;
+  h1 {
+    font-size: 45pt;
+  }
+}
+
+//About
+#about {
+  border-bottom: double $primary 15px !important;
+  position: relative;
+  h2 {
+    text-decoration: underline wavy $danger;
+    text-transform: uppercase;
+  }
+
+  .card {
+    background-color: transparent;
+  }
+}
+
+.heart {
+  width: 200px;
+  background:
+    radial-gradient(circle at 60% 65%, #F2896340 64%, transparent 65%) top left,
+    radial-gradient(circle at 40% 65%, #F2896340 64%, transparent 65%) top right,
+    linear-gradient(to bottom left, #F2896340 43%, transparent 43%) bottom left,
+    linear-gradient(to bottom right, #F2896340 43%, transparent 43%) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: absolute;
+  left: 82%;
+  top: 50%;
+  z-index: 2;
+}
+
+.heart::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+#projects {
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    text-decoration: underline wavy $warning;
+    text-transform: uppercase;
+  }
+}
+
+.project-description {
+  background-color: white;
+}
+
+//CONTACT
+#contact {
+  border-top: double $primary 15px !important;
+  position: relative;
+
+  h2 {
+    text-decoration: underline wavy $success;
+    text-transform: uppercase;
+  }
+}
+
+.nf-form-content button,
+.nf-form-content input[type=button],
+.nf-form-content input[type=submit] {
+  background-color: $primary !important;
+  border-radius: 5px;
+  font-size: 14pt !important;
+
+  &:hover {
+    color: white !important;
+    background-color: #012534 !important;
+    border-color: #011c27 !important
+  }
+}
+
+.nf-form-fields-required {
+  margin-left: 4rem;
+}
+
+//FOOTER
+footer {
+  background-color: $secondary;
+}
+
+//SHAPES
+#circle-1 {
+  @include shape(200px, 200px, $success, none, .5, 5%, 10%, 0deg);
+  border-radius: 50%;
+}
+
+#circle-2 {
+  @include shape(200px, 200px, $danger, none, .5, 95%, 50%, 0deg);
+  border-radius: 50%;
+}
+
+#circle-3 {
+  @include shape(200px, 200px, $secondary, none, .5, 5%, 80%, 0deg);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#circle-4 {
+  @include shape(200px, 200px, none, solid $danger 15px, .1, 23%, 20%, 0deg);
+  border-radius: 50%;
+}
+
+#circle-5 {
+  @include shape(200px, 200px, none, solid $success 15px, .5, 92%, 5%, 0deg);
+  border-radius: 50%;
+}
+
+#diamond {
+  @include shape(200px, 200px, $danger, none, .5, 75%, 30%, 45deg);
+}
+
+#diamond-2 {
+  @include shape(200px, 200px, none, solid $secondary 15px, .5, -10%, 5%, 45deg);
+}
+
+#diamond-3 {
+  @include shape(150px, 150px, none, solid $warning 15px, .1, 68%, 35%, 45deg);
+}
+
+#square {
+  @include shape(350px, 350px, none, solid $success 15px, .9, -6%, 5%, 0deg);
+  z-index: -1;
+}

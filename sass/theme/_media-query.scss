@@ -1,0 +1,24 @@
+ // Mobile Breakpoints
+ $xl: 1200px;
+ $lg: 980px;
+ $md: 768px;
+ $sm: 600px;
+ $xs: 450px;
+
+ @media only screen and (max-width: $xl) {
+    h2 {
+        &::after {
+          content: '';
+          width: 5px;
+          height: 13%;
+          top: 0%;
+          left: 90.75%;
+        }
+        &::before {
+          width: 8%;
+          height: 5px;
+          top: 12.75%;
+          left: 83.1%;
+        }
+    }
+ }
